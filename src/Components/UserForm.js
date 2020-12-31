@@ -32,7 +32,7 @@ export class UserForm extends Component {
    //Handle fields change
 
    handleChange = input => e => {
-      this.setState([input]: e.target.value);
+      this.setState({[input]: e.target.value});
    }
 
 
@@ -43,12 +43,15 @@ export class UserForm extends Component {
       const values = { firtsname, lastname, email, occupation,bio,
       city } = this.state;
 
-
-      return (
-         <div>
-            
-         </div>
-      )
+      switch(step) {
+         case 1:
+            return (
+               <FormUserDetails
+               nextStep={this.nextStep}
+               handleChange={this.handleChange}
+               values={values}/>
+            )
+      }
    }
 }
 
