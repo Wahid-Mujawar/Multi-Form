@@ -35,6 +35,11 @@ export class FormUserDetails extends Component {
             />
             <br/>
 
+            <RaisedButton
+               label="Continue"
+               primary={true}
+               style={StyleSheet.button}
+               />
           </React.Fragment>
        </MuiThemeProvider>
       )
