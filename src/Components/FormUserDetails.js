@@ -10,7 +10,15 @@ export class FormUserDetails extends Component {
       return (
        <MuiThemeProvider>
           <React.Fragment>
-             <AppBar title="Enter The User Details"/>
+            <AppBar title="Enter The User Details"/>
+            <TextField
+            hintText="Enter Your First Name"
+            floatingLabelText="First Name"
+            onChange={handleChange('firtName')}
+            defaultValue={values.firstName}
+            />
+            <br/>
+
           </React.Fragment>
        </MuiThemeProvider>
       )
