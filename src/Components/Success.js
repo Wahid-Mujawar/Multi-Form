@@ -16,12 +16,13 @@ export class Confirm extends Component {
    };
 
    render() {
-      const { values: { firstName, lastName, email, 
-         occupation, bio,  city} } = this.props;
+      
       return (
        <MuiThemeProvider>
           <React.Fragment>
             <AppBar title="Success"/>
+            <h2>ThankYou For Your Submission</h2>
+            <p>For Futher Procees You will Be Notified With Email</p>
             
           </React.Fragment>
        </MuiThemeProvider>
