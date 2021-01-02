@@ -9,13 +9,14 @@ export class FormUserDetails extends Component {
    continue = e => {
       e.preventDefault();
       this.props.nextStep()
+      
    };
    render() {
       const { values, handleChange } = this.props;
       return (
        <MuiThemeProvider>
           <React.Fragment>
-            <AppBar title="Enter The User Details"/>
+            <AppBar title="Enter User Details"/>
             <TextField
             hintText="Enter Your First Name"
             floatingLabelText="First Name"

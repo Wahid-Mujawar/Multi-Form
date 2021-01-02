@@ -11,8 +11,14 @@ export class Confirm extends Component {
       //Process Form!
       this.props.nextStep()
    };
+   
+   back = e => {
+      e.preventDefault();
+      this.props.previousStep()
+   };
+
    render() {
-      const { values: { firtsname, lastname, email, 
+      const { values: { firstName, lastName, email, 
          occupation, bio,  city} } = this.props;
       return (
        <MuiThemeProvider>
@@ -27,6 +33,11 @@ export class Confirm extends Component {
                <ListItem
                primaryText="Last Name"
                secondaryText={ lastName }
+               />
+
+               <ListItem
+               primaryText="Email"
+               secondaryText={ email }
                />
 
                <ListItem
@@ -45,13 +56,19 @@ export class Confirm extends Component {
                />
             </List>
             
-            
-            <RaisedButton
-               label="Continue"
+               <RaisedButton
+               label="Confirm & Continue"
                primary={true}
                style={styles.button}
                onClick={this.continue}
-               />
+            />
+
+            <RaisedButton
+               label="Back"
+               primary={false}
+               style={styles.button}
+               onClick={this.back}
+            />
           </React.Fragment>
        </MuiThemeProvider>
       )

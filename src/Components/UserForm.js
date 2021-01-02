@@ -6,8 +6,8 @@ import Confirm from './Confirm';
 export class UserForm extends Component {
    state = {
       step: 1,
-      firtsname: '',
-      lastname: '',
+      firtsName: '',
+      lastName: '',
       email: '',
       occupation: '',
       bio: '',
@@ -41,9 +41,9 @@ export class UserForm extends Component {
 
    render() {
       const { step } = this.state;
-      const { firtsname, lastname, email, occupation,bio,
+      const { firstName, lastName, email, occupation,bio,
       city } = this.state;
-      const values = { firtsname, lastname, email, occupation, bio,
+      const values = { firstName, lastName, email, occupation, bio,
       city }
 
       switch(step) {
@@ -65,11 +65,13 @@ export class UserForm extends Component {
          )
             case 3: 
             return (
-               <FormPersonalDetails
+               <Confirm
                nextStep={this.nextStep}
                previousStep={this.previousStep}
                values={values}/>
-            )
+         )
+               case 4:
+               return <Success/>
       }
    }
 }
