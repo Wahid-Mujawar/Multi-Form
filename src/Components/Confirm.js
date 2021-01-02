@@ -12,35 +12,40 @@ export class Confirm extends Component {
       this.props.nextStep()
    };
    render() {
-      const { values, handleChange } = this.props;
+      const { values: { firtsname, lastname, email, 
+         occupation, bio,  city} } = this.props;
       return (
        <MuiThemeProvider>
           <React.Fragment>
-            <AppBar title="Enter The User Details"/>
-            <TextField
-            hintText="Enter Your First Name"
-            floatingLabelText="First Name"
-            onChange={handleChange('firstName')}
-            defaultValue={values.firstName}
-            />
-            <br/>
+            <AppBar title="Confirm User Data"/>
+            <List>
+               <ListItem
+               primaryText="First Name"
+               secondaryText={ firstName }
+               />
 
-            <TextField
-            hintText="Enter Your Last Name"
-            floatingLabelText="Last Name"
-            onChange={handleChange('lastName')}
-            defaultValue={values.lastName}
-            />
-            <br/>
+               <ListItem
+               primaryText="Last Name"
+               secondaryText={ lastName }
+               />
 
-            <TextField
-            hintText="Enter Your Email"
-            floatingLabelText="Email"
-            onChange={handleChange('email')}
-            defaultValue={values.email}
-            />
-            <br/>
+               <ListItem
+               primaryText="Occupation"
+               secondaryText={ occupation }
+               />
 
+               <ListItem
+               primaryText=" Bio "
+               secondaryText={ bio }
+               />
+
+               <ListItem
+               primaryText="City"
+               secondaryText={ city }
+               />
+            </List>
+            
+            
             <RaisedButton
                label="Continue"
                primary={true}
@@ -59,4 +64,4 @@ const styles ={
    }
 }
 
-export default FormUserDetails
+export default Confirm;

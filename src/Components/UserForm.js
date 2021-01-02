@@ -68,7 +68,6 @@ export class UserForm extends Component {
                <FormPersonalDetails
                nextStep={this.nextStep}
                previousStep={this.previousStep}
-               handleChange={this.handleChange}
                values={values}/>
             )
       }
