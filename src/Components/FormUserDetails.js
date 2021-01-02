@@ -6,7 +6,12 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 
 export class FormUserDetails extends Component {
+   continue = e => {
+      e.preventDefault();
+      this.props.nextStep()
+   };
    render() {
+      const { values, handleChange } = this.props;
       return (
        <MuiThemeProvider>
           <React.Fragment>
@@ -30,15 +35,16 @@ export class FormUserDetails extends Component {
             <TextField
             hintText="Enter Your Email"
             floatingLabelText="Email"
-            onChange={handleChange('Email')}
-            defaultValue={values.Email}
+            onChange={handleChange('email')}
+            defaultValue={values.email}
             />
             <br/>
 
             <RaisedButton
                label="Continue"
                primary={true}
-               style={StyleSheet.button}
+               style={styles.button}
+               onClick={this.continue}
                />
           </React.Fragment>
        </MuiThemeProvider>
