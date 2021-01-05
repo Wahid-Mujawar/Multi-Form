@@ -21,7 +21,7 @@ export class Confirm extends Component {
        <MuiThemeProvider>
           <React.Fragment>
             <AppBar title="Success"/>
-            {/* <h2>ThankYou For Your Submission</h2> */}
+            <h2>ThankYou For Your Submission</h2>
             <p>For Futher Procees You will Be Notified With An Email</p>
             
           </React.Fragment>
