@@ -65,7 +65,7 @@ export class Confirm extends Component {
 
             <RaisedButton
                label="Back"
-               // primary={false}
+               primary={false}
                // style={styles.button}
                // onClick={this.back}
             />
