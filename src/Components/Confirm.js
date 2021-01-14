@@ -57,7 +57,7 @@ export class Confirm extends Component {
             </List>
             
                <RaisedButton
-               // label="Confirm & Continue"
+               label="Confirm & Continue"
                // primary={true}
                // style={styles.button}
                // onClick={this.continue}
