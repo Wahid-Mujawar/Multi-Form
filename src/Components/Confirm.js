@@ -67,7 +67,7 @@ export class Confirm extends Component {
                label="Back"
                primary={false}
                style={styles.button}
-               // onClick={this.back}
+               onClick={this.back}
             />
           </React.Fragment>
        </MuiThemeProvider>
