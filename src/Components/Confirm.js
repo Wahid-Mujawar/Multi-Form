@@ -60,7 +60,7 @@ export class Confirm extends Component {
                label="Confirm & Continue"
                primary={true}
                style={styles.button}
-               // onClick={this.continue}
+               onClick={this.continue}
             />
 
             <RaisedButton
