@@ -57,17 +57,17 @@ export class Confirm extends Component {
             </List>
             
                <RaisedButton
-               label="Confirm & Continue"
-               primary={true}
-               style={styles.button}
-               onClick={this.continue}
+               // label="Confirm & Continue"
+               // primary={true}
+               // style={styles.button}
+               // onClick={this.continue}
             />
 
             <RaisedButton
-               label="Back"
-               primary={false}
-               style={styles.button}
-               onClick={this.back}
+               // label="Back"
+               // primary={false}
+               // style={styles.button}
+               // onClick={this.back}
             />
           </React.Fragment>
        </MuiThemeProvider>
